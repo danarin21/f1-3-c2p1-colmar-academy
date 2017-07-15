@@ -1,0 +1,539 @@
+html,
+body {
+  font-size: 16px; /* 1 rem */
+  font-weight: normal;
+  font-family: sans-serif;
+  line-height: 1.4;
+  margin-top: 0;
+}
+
+p {
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: grey;
+}
+
+h1 {
+  font-family: 'Josefin Slab', serif;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 600;
+}
+
+li,
+a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+}
+
+section {
+  display: block;
+}
+
+.container { /* Site Content Width if needed */
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+header {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1f2442;
+  color: white;
+}
+
+/* Desktop and Tablet */
+.title {
+  display: flex;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.title svg { /* revisit to edit fill */
+  margin-left: 1.5rem;
+}
+
+nav.menu-desktop li, a {
+  margin-right: 1.5rem;
+  display: inline;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  transition: #e64e60 1s linear;
+}
+
+nav.menu-desktop a:hover {
+  color: #e64e60;
+}
+
+/* Mobile */
+nav.menu-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-desktop {
+    display: none;
+  }
+
+  .title {
+    display: none;
+  }
+
+  nav.menu-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 1.5rem;
+  }
+
+  nav.menu-mobile .icon {
+    align-items: center;
+  }
+}
+
+/* Main Banner */
+.banner {
+  background-color: #ededed;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.banner img.hero {
+  width: 60%;
+  height: auto;
+  vertical-align: top;
+  margin: 2rem 2.5rem 2rem 1.5rem;
+}
+
+.feature-block {
+  display: block;
+  float: right;
+  padding-right: 1.5rem;
+}
+
+.feature-block h1 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.feature-block p {
+  padding: 2rem 0;
+  font-size: 1.25rem;
+}
+
+.feature-block .button {
+  width: 100%;
+  padding: .5rem 0rem;
+  background-color: #e64e60;
+  text-align: center;
+  line-height: 1.5rem;
+  transition: #1f2442 100ms linear;
+}
+
+.feature-block .button a {
+  color: whitesmoke;
+}
+
+.feature-block .button:hover {
+  background-color: #1f2442;
+}
+
+/* Main Banner Mobile */
+@media only screen and (max-width: 768px) {
+
+  .banner img.hero {
+    width: 100%;
+    min-height: 11.25rem;
+    margin: 0 auto;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .feature-block {
+    margin: 2rem 1rem;
+  }
+
+  .feature-block h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .feature-block p {
+    display: block;
+  }
+
+  .feature-block .button {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+}
+
+/* Info Module */
+
+.information-module {
+  display: flex;
+  align-items: flex-start;
+  margin: 2rem 1.5rem;
+}
+
+.feature-1 {
+  width: 62%; /* adjusted to match image banner image */
+  padding-right: 1.5rem;
+}
+
+.feature-1 img.hero {
+  width: 100%;
+  height: auto;
+}
+
+.feature-1 h2 {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.feature-1 p {
+  padding-right: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.feature-1 span.caption {
+  font-size: .875rem;
+  font-family: 'Raleway', sans-serif;
+  color: grey;
+  font-style: italic;
+}
+
+/* Info Mod. card stacks */
+
+.card-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: -1rem;
+}
+
+.card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 26.4rem;
+  transition: lavender 2s ease-out;
+}
+
+.card:hover {
+  background-color: lavender;
+}
+
+img.desktop-thumbnail {
+  width: 35%;
+  padding: 1rem;
+}
+
+img.mobile-thumbnail {
+  display: none;
+}
+
+.card .info {
+  display: block;
+}
+
+.card .info p {
+  margin: .5rem 0;
+}
+
+.card .info a {
+  font-size: 1rem;
+  color: #00ace6;
+  opacity: .8;
+  transition: #016587 100ms linear;
+}
+
+.card .info a:hover {
+  color: #016587;
+}
+
+/* Info Mobile */
+@media only screen and (max-width: 768px) {
+
+  .information-module {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .feature-1 {
+    display: none;
+  }
+
+  .card-stack .card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  img.desktop-thumbnail {
+    display: none;
+  }
+
+  img.mobile-thumbnail {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .card .info {
+    margin: 1rem 1rem;
+  }
+
+  .card .info p {
+    display: block;
+  }
+}
+
+/* Courses Module */
+
+.courses-module {
+  display: flex;
+  align-items: flex-start;
+  background-color: #1f2442;
+}
+
+.courses-module h2 {
+  margin-top: 2rem;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.grid-desktop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.tiles-mobile {
+  display: none;
+}
+
+.course {
+  display: block;
+  width: 18rem;
+  background-color: white;
+  margin: .5rem .5rem;
+}
+
+.course img {
+  width: 100%;
+}
+
+.course .details {
+  display: block;
+  margin: 1rem;
+}
+
+.course h3 {
+  padding-bottom: .5rem;
+}
+
+.course span.tag {
+  font-size: .875rem;
+  font-family: 'Raleway', sans-serif;
+  color: grey;
+}
+
+.course p {
+  padding-top: .5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Courses Mobile*/
+@media only screen and (max-width: 768px) {
+
+  .grid-desktop {
+    display: none;
+  }
+
+  .tiles-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 2rem 0;
+  }
+
+  .tiles-mobile .button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #e64e60;
+    text-align: center;
+    line-height: 1.5rem;
+    margin-bottom: .5rem;
+  }
+
+  .tiles-mobile h3 {
+    text-align: left;
+    color: whitesmoke;
+  }
+
+
+}
+
+  /* Thesis Exhibit */
+
+.thesis-exhibit {
+    margin: 2rem 1.5rem;
+    display: block;
+}
+
+.thesis-exhibit h2 {
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+
+.thesis {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px black;
+}
+
+.feature-2 {
+    width: 62%; /* adjusted to match image banner image */
+    margin-right: 1.5rem;
+}
+
+.feature-2 video.vidHero {
+    width: 100%;
+    height: auto;
+}
+
+.feature-2 h3 {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    font-size: 2.25rem;
+}
+
+.feature-2 p {
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  /* Thesis card stacks */
+
+  .thesis .card-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .thesis .cards {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 26.43rem;
+    transition: lavender 2s ease-out;
+  }
+
+  .thesis .cards:hover {
+    background-color: lavender;
+  }
+
+  .thesis .cards img {
+    width: 35%;
+    padding: 1rem;
+  }
+
+  .thesis .card .info {
+    display: block;
+  }
+
+  .thesis .card .info p {
+    padding: .5rem 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .thesis-exhibit .card-stack {
+      display: none;
+    }
+
+    .thesis {
+      justify-content: center;
+    }
+
+    .thesis .feature-2 {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .thesis .feature-2 h3, p {
+      display: none;
+    }
+  }
+
+/* Footer */
+
+footer {
+  background-color: #ededed;
+  border-top: 1px solid grey;
+}
+
+footer .legal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 2rem 1.5rem 0 1.5rem;
+  padding-bottom: 2rem;
+}
+
+footer a {
+  font-size: .875rem;
+  color: grey;
+  transition: underline 1s linear;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .links a:nth-child(2n) {
+  padding-left: .5rem;
+}
+
+/* Footer Mobile */
+@media only screen and (max-width: 768px) {
+
+  footer .legal p {
+    margin: 1rem 1.5rem;
+    display: inline-flex;
+  }
+
+  footer .links {
+    display: none;
+  }
+}
